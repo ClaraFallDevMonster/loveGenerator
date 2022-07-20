@@ -36,7 +36,11 @@ p {
 }
 
 section {
-  margin: 3% 13%;
+  margin: 3% 12%;
+}
+
+#Willkommen {
+  margin-top: 7%;
 }
 
 #Begr {
@@ -51,20 +55,20 @@ section {
 .BegrText {
   width: 60vw;
   height:80vh;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.7);
+  overflow: scroll;
 }
 
 .BegrText p {
-  padding: 20%;
+  padding: 19%;
 }
 
 .start {
-  margin-top: 5%;
+  margin-top: 7%;
 }
 
 .start p {
   width: 60%;
-  font-size: 1.3rem;
 }
 
 form {
@@ -131,7 +135,7 @@ footer p {
 }
 
 
-@media screen and (max-width: 1024px) and (orientation: portrait) {
+@media screen and (max-width: 1024px) {
 
   p {
     font-size: 1.4rem;
@@ -164,10 +168,14 @@ footer p {
 
 }
 
-@media screen and (max-device-width: 600px) {
+@media screen and (max-device-width: 700px) {
+
+  #Willkommen {
+    margin-top: 8%;
+  }
 
   p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   h1 {
@@ -188,11 +196,11 @@ footer p {
   }
 
   .BegrText {
-    height:100vh;
+    height: 100vh;
   }
 
   .BegrText p {
-    padding: 17%;
+    padding: 18%;
   }
 
   #prozent {
@@ -213,8 +221,12 @@ footer p {
 
 @media screen and (max-device-width: 414px) {
 
+  #Willkommen {
+    margin-top: 12%;
+  }
+
   p {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
 
   h1 {
@@ -231,7 +243,7 @@ footer p {
   }
 
   .BegrText p {
-    padding: 15%;
+    padding: 16%;
   }
 
   #prozent {
@@ -242,5 +254,35 @@ footer p {
     margin-top: 16%;
     text-align: center;
   }
+
+}
+
+@media screen and (max-device-width: 375px) {
+
+  #Willkommen {
+    margin-top: 15%;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin-top: 15%;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  .BegrText p {
+    padding: 15%;
+  }
+
 
 }

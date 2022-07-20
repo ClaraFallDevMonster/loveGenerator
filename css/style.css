@@ -164,7 +164,7 @@ footer p {
 
 }
 
-@media screen and (max-width: 600px) and (orientation: portrait) {
+@media screen and (max-device-width: 600px) {
 
   p {
     font-size: 1.1rem;
@@ -211,7 +211,7 @@ footer p {
 
 }
 
-@media screen and (max-width: 414px) and (orientation: portrait) {
+@media screen and (max-device-width: 414px) {
 
   p {
     font-size: 1.1rem;

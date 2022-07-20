@@ -56,11 +56,10 @@ section {
   width: 60vw;
   height:80vh;
   background: rgba(255, 255, 255, 0.7);
-  overflow: scroll;
 }
 
 .BegrText p {
-  padding: 19%;
+  padding: 18%;
 }
 
 .start {
@@ -109,7 +108,7 @@ button {
 
 #Rechner {
   background: #fddbee;
-  padding: 5%;
+  padding: 4%;
   border-radius: 2px;
 }
 
@@ -197,6 +196,7 @@ footer p {
 
   .BegrText {
     height: 100vh;
+      overflow: scroll;
   }
 
   .BegrText p {

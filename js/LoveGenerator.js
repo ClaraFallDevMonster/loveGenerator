@@ -1,25 +1,26 @@
-function lovegenerator() {
-var yourName = "";
-var Othername = "";
-yourName = document.getElementById("YourName").value;
-otherName = document.getElementById("OtherName").value;
-var loveScore = Math.random();
-loveScore = Math.floor(loveScore * 100) +1;
+function generateLove() {
+  const yourName = document.getElementById('yourName').value.trim();
+  const crushName = document.getElementById('crushName').value.trim();
+  const resultDiv = document.getElementById('result');
+  if (!yourName || !crushName) {
+    resultDiv.innerHTML = '<p>Bitte gib beide Namen ein.</p>';
+    return;
+  }
 
-if (loveScore > 80) {
-  document.getElementById("prozent").innerHTML = yourName + "... Was für ein komischer Name. Dein Liebes-Score mit " + otherName + " ist " + loveScore + "%";
-  document.getElementById("text").innerHTML = "Der richtige Deckel für deinen hässlichen Topf. Kaufe dieser Person am besten sofort hübsche Unterwäsche um auf diesem Wege zu zeigen: Ich liebe dich trotz deines Übergewichts.";
-}
-else if (loveScore > 60 && loveScore <= 80) {
-  document.getElementById("prozent").innerHTML = yourName + "... Was für ein doofer Name. Dein Liebes-Score mit " + otherName + " ist " + loveScore + "%";
-  document.getElementById("text").innerHTML = "So weit so gut! Geh mal auf Tuchfühlung. Wenn's im Bett läuft, gib der Person eine Chance. Dringender Tipp: Wenn ihr mit dieser Person ein Sexvideo dreht, unterlegt es unbedingt mit Musik von irgendeinem Disney-Film! Falls es irgendwie doch den Weg ins Internet findet, werden die Disney-Anwälte schon dafür sorgen, dass es gelöscht wird.";
-}
-else if (loveScore > 30 && loveScore <= 60) {
-  document.getElementById("prozent").innerHTML = yourName + "... Was für ein dummer Name. Dein Liebes-Score mit " + otherName + " ist " + loveScore + "%";
-  document.getElementById("text").innerHTML = "Ihr könnt ein Paar werden, aber ihr werdet viel Streiten, Teller werfen und euch mit Nudelhölzern verprügeln. Beziehung heißt, Kompromisse einzugehen und sich auf den Gegner einzustellen. Partner, ich meinte Partner! Solange er/sie gut im Bett ist, wirst du glücklich sein.";
-}
-else {
-  document.getElementById("prozent").innerHTML =  yourName + "... Was für ein bescheuerter Name. Dein Liebes-Score mit " + otherName + " ist " + loveScore + "%";
-  document.getElementById("text").innerHTML = "Diese Person ist nicht die richtige! Am besten einen Korb geben, eine Abfuhr, eine Backpfeife, einen Arschtritt. Meat Loafs “I would do anything for love, but I won’t do that” bezieht sich im übrigen auf die Weigerung, dem ostdeutschen Lebenspartner “Tomatensauce” aus Mehlschwitze und Ketchup zu machen. Falls diese Person allerdings Freundschaft Plus will - schlag zu.";
-}
+  const percent = Math.floor(Math.random() * 101);
+  let description = '';
+  if (percent >= 90) {
+    description = `${yourName} and ${crushName} are so perfect together, it’s frankly disgusting. You probably finish each other’s sentences, share socks, and cry during the same shampoo commercials. ${yourName} hums when eating cereal and ${crushName} claps when the airplane lands – and yet, somehow, it just works. People around you either gag or apply for therapy. Your love is like a scented candle that smells like pancakes and success. Honestly, if you two ever break up, the moon will probably fall out of the sky and Taylor Swift will write a 12-minute song about the tragedy.`;
+  } else if (percent >= 70) {
+    description = `${yourName} and ${crushName} could totally make it – if ${yourName} stops talking to their plants like they’re coworkers and ${crushName} finally admits they don’t actually like jazz, they just think it sounds smart. You fit together like weird IKEA parts from different boxes, but hey, duct tape fixes everything. You argue about whether cereal is soup and spend 3 hours choosing a pizza topping, yet somehow still cuddle like two raccoons in a hoodie. Love is confusing. So are you two. But it kind of works.`;
+  } else if (percent >= 50) {
+    description = `This is one of those 'it depends' relationships. Like, it depends on whether ${yourName} ever learns to chew with their mouth closed and whether ${crushName} stops quoting TikToks like they're Shakespeare. You've both thought about breaking up, but were too lazy to update your dating app bios. You love-hate each other like siblings in a sitcom, and your couple dynamic could best be described as 'chaotic breakfast energy.' It's not a disaster – but it's definitely not something to show your therapist.`;
+  } else if (percent >= 30) {
+    description = `${yourName} and ${crushName} together? That’s a walking reality show. You argue over how to pronounce 'croissant' and somehow both think pineapple absolutely *does* belong on lasagna. ${yourName} thinks conspiracy theories are romantic and ${crushName} still believes in horoscopes written by a bored intern named Gary. Honestly, your relationship has the emotional stability of a raccoon on Red Bull. But hey – people binge-watch this kind of drama for fun, so maybe you're just ahead of your time.`;
+  } else if (percent >= 10) {
+    description = `${yourName}, love yourself. ${crushName} still wears socks in the shower 'for grip' and once microwaved a fork. Your love story is less 'Romeo and Juliet' and more 'two pigeons fighting over a breadstick.' You confuse obsession with attraction and call it ‘intense chemistry.’ Spoiler: it’s not. Even your couple selfies look like two strangers stuck in an elevator. Please consider friendship. Or witness protection.`;
+  } else {
+    description = `No offense, but ${yourName} and ${crushName} make less sense than decaf espresso. One of you collects belly button lint for “art,” the other thinks ketchup is spicy. Your energies repel each other so hard, physics textbooks need an update. When you're together, streetlights flicker and dogs start howling. This isn't love, it's performance art. Somewhere in the universe, a parallel version of you is screaming "DON’T DO IT!"... and honestly, they’re right.`;
+  }
+  resultDiv.innerHTML = `<div class="percentage">${percent}%</div><div class="description">${description}</div>`;
 }

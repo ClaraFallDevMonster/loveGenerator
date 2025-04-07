@@ -1,90 +1,33 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LOVE-Calculator</title>
-  <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Generator</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Nunito+Sans&display=swap" rel="stylesheet">
-  <script type="text/javascript" src="js/LoveGenerator.js"></script>
 </head>
 
 <body>
+  <div class="wrapper">
+    <div class="overlay"></div>
 
-<section id="Willkommen">
+      <div class="container">
+        <h2>Love Generator</h2>
+        <h3>by ClaraFall<img src="img/heart.png"></h3>
+        <input type="text" id="yourName" placeholder="Your Name">
+        <input type="text" id="crushName" placeholder="Your Crushs Name">
+        <button onclick="generateLove()">Generate Result</button>
+        <div id="result"></div>
+      </div>
+  </div>
 
-<div class="Willkommen">
-<h1> Willkommen auf der offiziellen</h1> <h4> (und sehr seriöööösen) </h4> <h1> Webseite des LOVE Calculators! </h1>
-<h3> Entdecken Sie die unglaubliche, atemberaubend genaue Fähigkeit des LOVE Calculators! </h3>
+  <footer>
+    &copy; 2025 by Clarissa Bilke
+  </footer>
 
-</section>
-
-<hr>
-
-<section id="Begr">
-
-<div class="BegrText">
-<p> Wir, das Team von LOVE-Calculator GmbH & co. KG, stehen für Seriööösität, Vertrauen, Kommerz, Schartalanerei und höchste Genauigkeit,
-wenn es um das Thema Zukunfstprognosen in der Liebe geht.
-<br>
-<br>
-Unsere einzigartige Magiekugel des Lichts, welche wir in jahrelanger, harter und zermübender Arbeit selbst entwickelt haben,
-wird Ihnen nach der Prognose, ob Sie und Ihre Flamme wirklich zusammenpassen, sogar imaginär Ihr Bett für Sie beziehen.
-<br>
-<br>
-</div>
-
-</section>
-
-<hr>
-
-<section class="start">
-
-<p>Starten Sie JETZT !!! Geben Sie dazu nur den Namen Ihres Schwarmes und ihren eigenen beschissenen Namen ein.<br>
-  <br>
-Der LOVE-Calculator gibt Ihnen den Rest !11!11!!111!!!!! </p>
-
-</section>
-
-<hr>
-
-<section id="Rechner">
-
-<h1>LOVE-Calculator</h1>
-
-<div class="formular">
-<form>
-<div class="Your">
-<label for="YourName">Dein Name:  </label>
-<input id="YourName" type="text" name="YourName">
-</div>
-<div class="Other">
-<label for="OtherName">Name des Schwarms:  </label>
-<input id="OtherName" type="text" name="OtherName">
-</div>
-<br>
-<button onclick="lovegenerator();" type="button" id="btn" name="button">Let the magic happen!</button><br>
-</form>
-<h1 id="prozent"></h1>
-<p id="text"></p>
-</div>
-
-</section>
-
-<hr>
-
-
-<footer>
-  <p> &copy; 2022 The LOVE-Calculator-Bitches aka Clara </p>
-</footer>
+  <script src="js/LoveGenerator.js"></script>
 
 </body>
-
-
-
 
 </html>

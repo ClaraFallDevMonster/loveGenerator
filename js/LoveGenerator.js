@@ -23,4 +23,4 @@ function generateLove() {
     description = `No offense, but ${yourName} and ${crushName} make less sense than decaf espresso. One of you collects belly button lint for “art,” the other thinks ketchup is spicy. Your energies repel each other so hard, physics textbooks need an update. When you're together, streetlights flicker and dogs start howling. This isn't love, it's performance art. Somewhere in the universe, a parallel version of you is screaming "DON’T DO IT!"... and honestly, they’re right.`;
   }
   resultDiv.innerHTML = `<div class="percentage">${percent}%</div><div class="description">${description}</div>`;
-}
+} 
